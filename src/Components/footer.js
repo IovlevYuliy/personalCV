@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 
 import './styles/footer.css';
 
@@ -21,9 +22,9 @@ export function Footer() {
 					</ul>
 				</div>
 				<div id="go-top">
-					<a className="smoothscroll" title="Back to Top" href="#home">
-						<i className="icon-up-open"/>
-					</a>
+					<Link to="home" smooth={true} title="Back to Top">
+						<i className="fa fa-chevron-up" />
+					</Link>
 				</div>
 			</div>
 		</footer>

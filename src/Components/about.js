@@ -17,12 +17,9 @@ export default function About() {
                   <div className="columns contact-details">
                      <h2>Contact Details</h2>
                      <p className="address">
-                        <span>name</span><br/>
-                        <span>stree<br />
-                              city state zip
-                        </span><br />
-                        <span>phone</span><br />
-                        <span>email</span>
+                        <span>Yuliy Iovlev</span><br/>
+                        <span>Tomsk, Russia</span><br/>
+                        <span>iovlev2@gmail.com</span>
                      </p>
                   </div>
                   <div className="columns download">

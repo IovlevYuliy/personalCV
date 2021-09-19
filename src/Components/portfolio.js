@@ -24,7 +24,7 @@ export default function Portfolio() {
     // }
 
 	return (
-		<section id="portfolio">
+        <section id="portfolio">
 			<div className="row">
 				<div className="twelve columns collapsed">
 					<h1>My works and pet-projects.</h1>

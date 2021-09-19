@@ -12,23 +12,23 @@ footer a:hover, footer a:focus { color: #fff; }
 
 /* copyright */
 footer .copyright {
-    margin: 0;
-    padding: 0;
+   margin: 0;
+   padding: 0;
  }
 footer .copyright li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    line-height: 24px;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   line-height: 24px;
 }
 .ie footer .copyright li {
    display: inline;
 }
 footer .copyright li:before {
-    content: "\2022";
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #095153;
+   content: "\2022";
+   padding-left: 10px;
+   padding-right: 10px;
+   color: #095153;
 }
 footer .copyright  li:first-child:before {
     display: none;
@@ -41,11 +41,11 @@ footer .social-links {
    font-size: 30px;
 }
 footer .social-links li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    margin-left: 42px;
-    color: #F06000;
+   display: inline-block;
+   margin: 0;
+   padding: 0;
+   margin-left: 42px;
+   color: #F06000;
 }
 
 footer .social-links li:first-child { margin-left: 0; }
@@ -57,6 +57,7 @@ footer .social-links li:first-child { margin-left: 0; }
    left: 50%;
    margin-left: -30px;
 }
+
 #go-top a {
 	text-decoration: none;
 	border: 0 none;
@@ -76,4 +77,5 @@ footer .social-links li:first-child { margin-left: 0; }
    line-height: 60px;
  	border-radius: 100%;
 }
+
 #go-top a:hover { background-color: #0F9095; }

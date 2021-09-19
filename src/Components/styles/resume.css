@@ -56,12 +56,12 @@
 }
 
 .bars .skills {
-    margin-top: 36px;
-    list-style: none;
+   margin-top: 36px;
+   list-style: none;
 }
 
 .bars li {
-    position: relative;
+   position: relative;
   	margin-bottom: 60px;
   	background: #ccc;
   	height: 42px;
@@ -70,24 +70,24 @@
 
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
-    color: #313131;
+   color: #313131;
 	text-transform: uppercase;
-    letter-spacing: 2px;
+   letter-spacing: 2px;
 	font-weight: normal;
-    position: relative;
+   position: relative;
 	top: -36px;
 }
 
 .bar-expand {
-    position: absolute;
-    left: 0;
-    top: 0;
+   position: absolute;
+   left: 0;
+   top: 0;
 
-    margin: 0;
-    padding-right: 24px;
-  	background: #313131;
-    display: inline-block;
-  	height: 42px;
-    line-height: 42px;
-    border-radius: 3px 0 0 3px;
+   margin: 0;
+   padding-right: 24px;
+   background: #313131;
+   display: inline-block;
+   height: 42px;
+   line-height: 42px;
+   border-radius: 3px 0 0 3px;
 }

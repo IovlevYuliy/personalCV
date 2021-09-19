@@ -1,6 +1,6 @@
 header {
    position: relative;
-   height: 800px;
+   height: 100vh;
    min-height: 500px;
    width: 100%;
    background: #161415 url('/images/background.jpg') no-repeat top center;
@@ -148,6 +148,7 @@ ul#nav li a {
 	text-decoration: none;
    text-align: left;
    color: #fff;
+   cursor: pointer;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -157,4 +158,4 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #F06000; }
+ul#nav li a.current { color: #F06000; }

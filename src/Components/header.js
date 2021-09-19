@@ -1,22 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 
 import './styles/header.css';
 
 export default function Header() {
+   const [isHomeActive, setIsHomeActive] = useState(false);
+
    return (
-   	<header id="home">
+      <header id="home">
          <nav id="nav-wrap">
 
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
             <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
-            <ul id="nav" className="nav">
-               <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-               <li><a className="smoothscroll" href="#about">About</a></li>
-               <li><a className="smoothscroll" href="#resume">Resume</a></li>
-               <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-               <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-               <li><a className="smoothscroll" href="#contact">Contact</a></li>
+            <ul id="nav" className={isHomeActive ? '' : 'opaque'}>
+               <li>
+                  <Link
+                     onSetActive={() => setIsHomeActive(prev => !prev)}
+                     onSetInactive={() => setIsHomeActive(prev => !prev)}
+                     activeClass="current"
+                     to="home" spy={true} smooth={true}>
+                       Home
+                  </Link>
+               </li>
+               <li><Link activeClass="current" to="about" spy={true} smooth={true}>About</Link></li>
+               <li><Link activeClass="current" to="resume" spy={true} smooth={true}>Resume</Link></li>
+               <li><Link activeClass="current" to="portfolio" spy={true} smooth={true}>Works</Link></li>
             </ul>
 
          </nav>
@@ -29,7 +38,7 @@ export default function Header() {
                <ul className="social">
                   <li>
                      <a href=''>
-                        <i className='fa fa-github'/>
+                        <i className='fa fa-github' />
                      </a>
                   </li>
                </ul>
@@ -37,9 +46,9 @@ export default function Header() {
          </div>
 
          <p className="scrolldown">
-            <a className="smoothscroll" href="#about">
-               <i className="icon-down-circle"/>
-            </a>
+            <Link to="about" smooth={true}>
+               <i className="fa fa-chevron-circle-down"/>
+            </Link>
          </p>
 
       </header>

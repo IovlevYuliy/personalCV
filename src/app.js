@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactGA from 'react-ga';
-import './app.css';
+
 import Header from './Components/header';
 import Footer from './Components/footer';
 import About from './Components/about';
 import Resume from './Components/resume';
 import Portfolio from './Components/portfolio';
+
+import './app.css';
 
 export default function App() {
 
@@ -21,12 +23,12 @@ export default function App() {
   // }
 
   return (
-  	<div>
-      <Header/>
-      <About/>
-      <Resume/>
-      <Portfolio/>
-      <Footer/>
+    <div>
+		<Header />
+		<About />
+		<Resume />
+		<Portfolio />
+		<Footer />
     </div>
   );
 }
