@@ -31,7 +31,7 @@ footer .copyright li:before {
    color: #095153;
 }
 footer .copyright  li:first-child:before {
-    display: none;
+   display: none;
 }
 
 /* social links */
@@ -76,6 +76,7 @@ footer .social-links li:first-child { margin-left: 0; }
    font-size: 21px;
    line-height: 60px;
  	border-radius: 100%;
+   cursor: pointer;
 }
 
 #go-top a:hover { background-color: #0F9095; }

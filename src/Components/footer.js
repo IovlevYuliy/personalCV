@@ -4,18 +4,17 @@ import { Link } from 'react-scroll';
 import './styles/footer.css';
 
 export function Footer() {
-    // if(this.props.data){
-    //   var networks= this.props.data.social.map(function(network){
-    //     return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>
-    //   })
-    // }
-
     return (
 		<footer>
 			<div className="row">
 				<div className="twelve columns">
 					<ul className="social-links">
-						networks
+						<li>
+							<a href='https://github.com/IovlevYuliy'
+								target='_blank' rel='noopener noreferrer'>
+								<i className='fab fa-github' />
+							</a>
+						</li>
 					</ul>
 					<ul className="copyright">
 						<li>&copy; Copyright 2021 Yuliy Iovlev</li>

@@ -18,7 +18,7 @@ export default function Header() {
                   <Link
                      onSetActive={() => setIsHomeActive(prev => !prev)}
                      onSetInactive={() => setIsHomeActive(prev => !prev)}
-                     activeClass="current"
+                     activeClass="current" profile
                      to="home" spy={true} smooth={true}>
                        Home
                   </Link>
@@ -32,13 +32,14 @@ export default function Header() {
 
          <div className="row banner">
             <div className="banner-text">
-               <h1 className="responsive-headline">I'm Yuliy Iovlev.</h1>
-               <h3>I'm a full-stask engineer.</h3>
+               <h1 className="responsive-headline">I'm Yuliy Iovlev</h1>
+               <h3>Full-stack developer using tabs for indentation.</h3>
                <hr />
                <ul className="social">
                   <li>
-                     <a href=''>
-                        <i className='fa fa-github' />
+                     <a href='https://github.com/IovlevYuliy'
+                        target='_blank' rel='noopener noreferrer'>
+                        <i className='fab fa-github' />
                      </a>
                   </li>
                </ul>
