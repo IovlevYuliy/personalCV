@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 
 import Header from './Components/header';
@@ -10,26 +10,19 @@ import Portfolio from './Components/portfolio';
 import './app.css';
 
 export default function App() {
+	useEffect(() => {
+		ReactGA.initialize('208555112');
+		ReactGA.pageview(window.location.pathname);
+	}, []);
 
-  // constructor(props){
-  //   super(props);
-  //   this.state = {
-  //     foo: 'bar',
-  //     resumeData: {}
-  //   };
-
-  //   // ReactGA.initialize('UA-110570651-1');
-  //   // ReactGA.pageview(window.location.pathname);
-  // }
-
-  return (
-    <div>
-		<Header />
-		<About />
-		<Resume />
-		<Portfolio />
-		<Footer />
-    </div>
-  );
+	return (
+		<div>
+			<Header />
+			<About />
+			<Resume />
+			<Portfolio />
+			<Footer />
+		</div>
+	);
 }
 

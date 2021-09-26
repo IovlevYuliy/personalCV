@@ -18,7 +18,7 @@ export default function Header() {
                   <Link
                      onSetActive={() => setIsHomeActive(prev => !prev)}
                      onSetInactive={() => setIsHomeActive(prev => !prev)}
-                     activeClass="current" profile
+                     activeClass="current"
                      to="home" spy={true} smooth={true}>
                        Home
                   </Link>
