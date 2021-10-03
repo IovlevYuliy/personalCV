@@ -4,15 +4,9 @@ import './styles/portfolio.css';
 
 const projects = [
     {
-        title: 'AAAA',
-        category: 'AAAA',
-        url: '/aa/',
-        image: '/images/sample.jpg',
-    },
-    {
-        title: 'BBBB',
-        category: 'BBBB',
-        url: '/bb/',
+        title: 'My project',
+        category: 'In developing',
+        url: '/',
         image: '/images/sample.jpg',
     },
 ];

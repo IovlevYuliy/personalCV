@@ -12,9 +12,9 @@ export default function About() {
             <div className="nine columns main-col">
                <h2>About Me</h2>
 
-               <p>I am techie at heart. Since school I have been doing competitive programming. I have a large experience on different programming contest.<br/>
-                  I like algorithmic and math problems, I enjoy to work with computer graphics and 3D geometry. I am responsible for each line of code that I produce. I approach my tasks responsibly and I am ready to deep into problem down to the smallest details.<br/>
-                  Outside of work I like football and other active games. I love to travel and lead a fairly active lifestyle.</p>
+               <p>I am techie at heart. Since school I have been doing competitive programming and now have a large experience on different programming contest.<br/>
+                  I like algorithmic and math problems, enjoy working with computer graphics and 3D geometry. I am responsible for each produced line of code and fulfill my tasks in good faith and I am ready to deep into problem down to the smallest details.<br/>
+                  Outside of work I like football and other active games, love traveling and lead a fairly active lifestyle.</p>
                <div className="row">
                   <div className="columns contact-details">
                      <h2>Contact Details</h2>

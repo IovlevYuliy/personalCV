@@ -11,7 +11,7 @@ import './app.css';
 
 export default function App() {
 	useEffect(() => {
-		ReactGA.initialize('208555112');
+		ReactGA.initialize('G-6S0WN3PTB7');
 		ReactGA.pageview(window.location.pathname);
 	}, []);
 

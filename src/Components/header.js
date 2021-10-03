@@ -1,31 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { useMediaQuery } from 'react-responsive';
 
 import './styles/header.css';
 
 export default function Header() {
-   const [isHomeActive, setIsHomeActive] = useState(false);
+   const [isHomeActive, setIsHomeActive] = useState(true);
+   const [navbarVisible, setNavbarVisibility] = useState(true);
+
+   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+   const hideNavbar = useCallback(() => {
+      if (!isMobile) {
+         return;
+      }
+      setNavbarVisibility(false)
+   }, [setNavbarVisibility, isMobile]);
+
+   const showNavbar = useCallback(() => setNavbarVisibility(true), [setNavbarVisibility]);
+
+   useEffect(() => {
+      if (!isMobile) {
+         setNavbarVisibility(true);
+      }
+   }, [isMobile]);
 
    return (
       <header id="home">
          <nav id="nav-wrap">
 
-            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-            <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
+            <div id='nav-buttons' style={{ display: isMobile ? 'block' : 'none' }}>
+               <a
+                  className="mobile-btn"
+                  title="Show navigation"
+                  style={{ display: navbarVisible ? 'none' : 'block' }}
+                  onClick={showNavbar}>
+                     Show navigation
+               </a>
 
-            <ul id="nav" className={isHomeActive ? '' : 'opaque'}>
+               <a
+                  className="mobile-btn"
+                  title="Hide navigation"
+                  onClick={hideNavbar}
+                  style={{ display: navbarVisible ? 'block' : 'none' }}>
+                     Hide navigation
+               </a>
+            </div>
+
+            <ul id="nav"
+               style={{ display: navbarVisible ? 'block' : 'none' }}
+               className={isHomeActive ? '' : 'opaque'}>
                <li>
                   <Link
-                     onSetActive={() => setIsHomeActive(prev => !prev)}
-                     onSetInactive={() => setIsHomeActive(prev => !prev)}
+                     onSetActive={() => setIsHomeActive(true)}
+                     onSetInactive={() => setIsHomeActive(false)}
                      activeClass="current"
-                     to="home" spy={true} smooth={true}>
+                     onClick={hideNavbar}
+                     to="home" spy={true} hashSpy={true} smooth={true}>
                        Home
                   </Link>
                </li>
-               <li><Link activeClass="current" to="about" spy={true} smooth={true}>About</Link></li>
-               <li><Link activeClass="current" to="resume" spy={true} smooth={true}>Resume</Link></li>
-               <li><Link activeClass="current" to="portfolio" spy={true} smooth={true}>Works</Link></li>
+               <li><Link onClick={hideNavbar} activeClass="current" to="about" spy={true} hashSpy={true} smooth={true}>About</Link></li>
+               <li><Link onClick={hideNavbar} activeClass="current" to="resume" spy={true} hashSpy={true} smooth={true}>Resume</Link></li>
+               <li><Link onClick={hideNavbar} activeClass="current" to="portfolio" spy={true} hashSpy={true} smooth={true}>Works</Link></li>
             </ul>
 
          </nav>
@@ -33,7 +70,7 @@ export default function Header() {
          <div className="row banner">
             <div className="banner-text">
                <h1 className="responsive-headline">I'm Yuliy Iovlev</h1>
-               <h3>Full-stack developer using tabs for indentation.</h3>
+               <h3>Full-stack developer who uses tabs for indentation.</h3>
                <hr />
                <ul className="social">
                   <li>
