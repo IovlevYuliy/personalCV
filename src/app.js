@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 import Header from './Components/header';
 import Footer from './Components/footer';
@@ -12,7 +12,7 @@ import './app.css';
 export default function App() {
 	useEffect(() => {
 		ReactGA.initialize('G-6S0WN3PTB7');
-		ReactGA.pageview(window.location.pathname);
+		ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 	}, []);
 
 	return (
