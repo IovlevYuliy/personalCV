@@ -26,7 +26,7 @@ export default function About() {
                   </div>
                   <div className="columns download">
                      <p>
-                        <a href='' className="button">
+                        <a href='/cv_iovlev.pdf' download className="button">
                            <i className="fa fa-download"/> Download Resume
                         </a>
                      </p>

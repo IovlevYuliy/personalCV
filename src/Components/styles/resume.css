@@ -111,6 +111,11 @@
    margin: 0;
 }
 
-.technology-icons-container {
-   margin-top: 5px;
+.tech-item {
+   white-space: nowrap;
+   margin-right: 10px;
+}
+
+.tech-item > i {
+   margin-right: 2px;
 }

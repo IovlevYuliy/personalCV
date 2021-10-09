@@ -5,10 +5,10 @@ import { useMediaQuery } from 'react-responsive';
 import './styles/header.css';
 
 export default function Header() {
-   const [isHomeActive, setIsHomeActive] = useState(true);
-   const [navbarVisible, setNavbarVisibility] = useState(true);
-
    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+
+   const [isHomeActive, setIsHomeActive] = useState(true);
+   const [navbarVisible, setNavbarVisibility] = useState(!isMobile);
 
    const hideNavbar = useCallback(() => {
       if (!isMobile) {
@@ -57,12 +57,36 @@ export default function Header() {
                      activeClass="current"
                      onClick={hideNavbar}
                      to="home" spy={true} hashSpy={true} smooth={true}>
-                       Home
+                        Home
                   </Link>
                </li>
-               <li><Link onClick={hideNavbar} activeClass="current" to="about" spy={true} hashSpy={true} smooth={true}>About</Link></li>
-               <li><Link onClick={hideNavbar} activeClass="current" to="resume" spy={true} hashSpy={true} smooth={true}>Resume</Link></li>
-               <li><Link onClick={hideNavbar} activeClass="current" to="portfolio" spy={true} hashSpy={true} smooth={true}>Works</Link></li>
+               <li>
+                  <Link
+                     onSetActive={() => setIsHomeActive(false)}
+                     activeClass="current"
+                     onClick={hideNavbar}
+                     to="about" spy={true} hashSpy={true} smooth={true}>
+                        About
+                  </Link>
+               </li>
+               <li>
+                  <Link
+                     onSetActive={() => setIsHomeActive(false)}
+                     activeClass="current"
+                     onClick={hideNavbar}
+                     to="resume" spy={true} hashSpy={true} smooth={true}>
+                        Resume
+                  </Link>
+               </li>
+               <li>
+                  <Link
+                     onSetActive={() => setIsHomeActive(false)}
+                     activeClass="current"
+                     onClick={hideNavbar}
+                     to="portfolio" spy={true} hashSpy={true} smooth={true}>
+                        Works
+                  </Link>
+               </li>
             </ul>
 
          </nav>
