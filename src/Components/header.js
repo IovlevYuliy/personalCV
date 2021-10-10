@@ -60,6 +60,7 @@ export default function Header() {
                className={isHomeActive ? '' : 'opaque'}>
                <li>
                   <Link
+                     className={isHomeActive ? 'current' : ''}
                      onSetActive={() => setIsHomeActive(true)}
                      onSetInactive={() => setIsHomeActive(false)}
                      activeClass="current"
