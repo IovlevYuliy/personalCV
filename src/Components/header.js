@@ -10,12 +10,16 @@ export default function Header() {
    const [isHomeActive, setIsHomeActive] = useState(true);
    const [navbarVisible, setNavbarVisibility] = useState(!isMobile);
 
+   const handleOutsideClick = useCallback(() => {
+      setNavbarVisibility(false);
+   }, []);
+
    const hideNavbar = useCallback(() => {
       if (!isMobile) {
          return;
       }
-      setNavbarVisibility(false)
-   }, [setNavbarVisibility, isMobile]);
+      setNavbarVisibility(false);
+   }, [isMobile]);
 
    const showNavbar = useCallback(() => setNavbarVisibility(true), [setNavbarVisibility]);
 
@@ -27,10 +31,12 @@ export default function Header() {
 
    useEffect(() => {
       if (isMobile) {
-         document.addEventListener('click', hideNavbar, true);
+         document.addEventListener('click', handleOutsideClick, true);
+      } else {
+         document.removeEventListener('click', handleOutsideClick, true);
       }
 
-      return () => document.removeEventListener('click', hideNavbar);
+      return () => document.removeEventListener('click', handleOutsideClick, true);
    }, [isMobile]);
 
    return (
