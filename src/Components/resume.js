@@ -162,8 +162,8 @@ export default function Resume() {
 										<div>
 											{work.technologies.map(it => {
 												return (
-													<span className='tech-item'>
-														<i key={`icon-${it.icon}`} title={it.name} className={`fa-2x fa-fw ${it.icon}`}/>
+													<span key={`tech-${it.icon}`} className='tech-item'>
+														<i title={it.name} className={`fa-2x fa-fw ${it.icon}`}/>
 														{it.name}
 													</span>
 												);

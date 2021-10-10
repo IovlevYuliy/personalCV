@@ -25,6 +25,14 @@ export default function Header() {
       }
    }, [isMobile]);
 
+   useEffect(() => {
+      if (isMobile) {
+         document.addEventListener('click', hideNavbar, true);
+      }
+
+      return () => document.removeEventListener('click', hideNavbar);
+   }, [isMobile]);
+
    return (
       <header id="home">
          <nav id="nav-wrap">
