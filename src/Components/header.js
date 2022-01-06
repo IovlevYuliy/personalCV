@@ -113,9 +113,15 @@ export default function Header() {
                <hr />
                <ul className="social">
                   <li>
-                     <a href='https://github.com/IovlevYuliy'
+                     <a href='https://github.com/IovlevYuliy' title='Github'
                         target='_blank' rel='noopener noreferrer'>
                         <i className='fab fa-github' />
+                     </a>
+                  </li>
+                  <li>
+                     <a href='https://t.me/i_yuliy' title='Telegram'
+                        target='_blank' rel='noopener noreferrer'>
+                        <i className='fab fa-telegram' />
                      </a>
                   </li>
                </ul>
