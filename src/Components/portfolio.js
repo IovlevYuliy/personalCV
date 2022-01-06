@@ -4,10 +4,10 @@ import './styles/portfolio.css';
 
 const projects = [
     {
-        title: 'My project',
-        category: 'In developing',
-        url: '/',
-        image: '/images/sample.jpg',
+        title: 'Intro page',
+        category: 'Interactive globe for displaying terrestrial research stations',
+        url: 'https://iovlevyuliy.github.io/globe-stations/src/index',
+        image: '/images/globe.png',
     },
 ];
 
@@ -17,7 +17,7 @@ export default function Portfolio() {
 			<div className="row">
 				<div className="twelve columns collapsed">
 					<h1>My works and pet-projects</h1>
-					<div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                    <div id="portfolio-wrapper" className="bgrid-thirds s-bgrid-thirds cf">
                 		{projects.map(project => {
                             return (
                                 <div key={project.title} className="columns portfolio-item">

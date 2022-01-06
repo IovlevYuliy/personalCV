@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 import './styles/footer.css';
 
-export function Footer() {
+export default function Footer() {
     return (
 		<footer>
 			<div className="row">
@@ -29,5 +29,3 @@ export function Footer() {
 		</footer>
 	);
 }
-
-export default Footer;

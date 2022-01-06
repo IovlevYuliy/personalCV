@@ -44,7 +44,8 @@ const works = [
 			{ name: 'Kubernetes', icon: 'fas fa-dharmachakra' },
 			{ name: 'Python', icon: 'fab fa-python' },
 			{ name: 'MongoDB', icon: 'fab fa-mdb' },
-			{ name: 'MySQL, PostgreSQL', icon: 'fas fa-database' },
+			{ name: 'MySQL', icon: 'fas fa-database' },
+			{ name: 'PostgreSQL', icon: 'fas fa-database' },
 			{ name: 'Ubuntu', icon: 'fab fa-ubuntu' },
 			{ name: 'Git', icon: 'fab fa-git-square' },
 			{ name: 'Jira', icon: 'fab fa-jira' },
@@ -162,7 +163,7 @@ export default function Resume() {
 										<div>
 											{work.technologies.map(it => {
 												return (
-													<span key={`tech-${it.icon}`} className='tech-item'>
+													<span key={`tech-${it.name}`} className='tech-item'>
 														<i title={it.name} className={`fa-2x fa-fw ${it.icon}`}/>
 														{it.name}
 													</span>
