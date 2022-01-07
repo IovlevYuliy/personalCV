@@ -80,7 +80,7 @@ const works = [
 
 const skills = [
 	{ name: 'Russian language', level: '100%', title: 'Native' },
-	{ name: 'English language', level: '65%', title: 'Upper Intermediate' },
+	{ name: 'English language', level: '60%', title: 'Intermediate' },
 	{ name: 'JavaScript', level: '100%', title: 'Expert' },
 	{ name: 'C++', level: '80%', title: 'Advanced' },
 	{ name: 'Git', level: '80%', title: 'Advanced' },

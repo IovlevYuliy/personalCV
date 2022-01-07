@@ -15,6 +15,12 @@ export default function Footer() {
 								<i className='fab fa-github' />
 							</a>
 						</li>
+						<li>
+							<a href='https://t.me/i_yuliy' title='Telegram'
+								target='_blank' rel='noopener noreferrer'>
+								<i className='fab fa-telegram' />
+							</a>
+						</li>
 					</ul>
 					<ul className="copyright">
 						<li>&copy; Copyright 2021 Yuliy Iovlev</li>
