@@ -6,7 +6,7 @@ const projects = [
     {
         title: 'Intro page',
         category: 'Interactive globe for displaying terrestrial research stations',
-        url: 'https://iovlevyuliy.github.io/globe-stations/src/index',
+        url: 'https://virshin.github.io/globe-stations/src/',
         image: '/images/globe.png',
     },
 ];
