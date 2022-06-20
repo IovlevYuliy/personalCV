@@ -21,7 +21,7 @@ export default function About() {
                      <p>
                         <span>Yuliy Iovlev</span><br/>
                         <span>Tomsk, Russia</span><br/>
-                        <span>iovlev2@gmail.com</span>
+                        <span><a href="mailto:iovlev2@gmail.com">iovlev2@gmail.com</a></span>
                      </p>
                   </div>
                   <div className="columns download">
