@@ -109,9 +109,21 @@ export default function Header() {
          <div className="row banner">
             <div className="banner-text">
                <h1 className="responsive-headline">I'm Yuliy Iovlev</h1>
-               <h3>Full-stack developer who uses tabs for indentation.</h3>
+               <h3>Full-stack developer who uses spaces for indentation.</h3>
                <hr />
                <ul className="social">
+                  <li>
+                     <a href='https://linkedin.com/in/yuliy-iovlev' title='LinkedIn'
+                        target='_blank' rel='noopener noreferrer'>
+                        <i className='fab fa-linkedin' />
+                     </a>
+                  </li>
+                  <li>
+                     <a href='https://t.me/i_yuliy' title='Telegram'
+                        target='_blank' rel='noopener noreferrer'>
+                        <i className='fab fa-telegram' />
+                     </a>
+                  </li>
                   <li>
                      <a href='https://github.com/IovlevYuliy' title='Github'
                         target='_blank' rel='noopener noreferrer'>
@@ -119,9 +131,9 @@ export default function Header() {
                      </a>
                   </li>
                   <li>
-                     <a href='https://t.me/i_yuliy' title='Telegram'
+                     <a href='https://gitlab.com/iovlev_yuliy' title='GitLab'
                         target='_blank' rel='noopener noreferrer'>
-                        <i className='fab fa-telegram' />
+                        <i className='fab fa-gitlab' />
                      </a>
                   </li>
                </ul>

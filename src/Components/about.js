@@ -20,7 +20,7 @@ export default function About() {
                      <h2>Contact Details</h2>
                      <p>
                         <span>Yuliy Iovlev</span><br/>
-                        <span>Tomsk, Russia</span><br/>
+                        <span>Tbilisi, Georgia</span><br/>
                         <span><a href="mailto:iovlev2@gmail.com">iovlev2@gmail.com</a></span>
                      </p>
                   </div>

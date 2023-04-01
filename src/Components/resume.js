@@ -15,9 +15,26 @@ const squareListType = { listStyleType: 'square', marginTop: 0 };
 
 const works = [
 	{
+		company: 'Adalisk',
+		position: 'C++ Software Developer',
+		date: '2022 — Present',
+		description: () => {
+			return (
+				<ul style={squareListType}>
+					<li>Developing CAD/CAM system for designing and manufacturing all dental restorations.</li>
+				</ul>
+			);
+		},
+		technologies: [
+			{ name: 'C++, STL, Boost', icon: 'fa fa-code' },
+			{ name: 'Microsoft Visual C++', icon: 'fab fa-windows' },
+			{ name: 'Atlassian', icon: 'fab fa-atlassian' },
+		],
+	},
+	{
 		company: 'Rubius',
 		position: 'Full Stack Software Engineer',
-		date: '2019 — Present',
+		date: '2019 — 2022',
 		description: () => {
 			return (
 				<ul style={squareListType}>
