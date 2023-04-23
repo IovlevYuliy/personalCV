@@ -26,9 +26,14 @@ const works = [
 			);
 		},
 		technologies: [
-			{ name: 'C++, STL, Boost', icon: 'fa fa-code' },
-			{ name: 'Microsoft Visual C++', icon: 'fab fa-windows' },
-			{ name: 'Atlassian', icon: 'fab fa-atlassian' },
+			[
+				{ name: 'C++, STL, Boost', icon: 'fa fa-code' },
+				{ name: 'Python', icon: 'fab fa-python' },
+			],
+			[
+				{ name: 'Microsoft Visual C++', icon: 'fab fa-windows' },
+				{ name: 'Atlassian', icon: 'fab fa-atlassian' },
+			]
 		],
 	},
 	{
@@ -46,27 +51,36 @@ const works = [
 			);
 		},
 		technologies: [
-			{ name: 'JavaScript', icon: 'fab fa-js-square' },
-			{ name: 'Node.js', icon: 'fab fa-node' },
-			{ name: 'Three.js', icon: 'fas fa-cubes' },
-			{ name: 'React.js', icon: 'fab fa-react' },
-			{ name: 'WebGL', icon: 'fas fa-palette' },
-			{ name: 'HTML5', icon: 'fab fa-html5' },
-			{ name: 'CSS3', icon: 'fab fa-css3-alt' },
-			{ name: 'Vue.js', icon: 'fab fa-vuejs' },
-			{ name: 'GLSL', icon: 'fa fa-code' },
-			{ name: 'Docker', icon: 'fab fa-docker' },
-			{ name: 'Redis', icon: 'fas fa-cube' },
-			{ name: 'GCloud', icon: 'fab fa-google' },
-			{ name: 'Kubernetes', icon: 'fas fa-dharmachakra' },
-			{ name: 'Python', icon: 'fab fa-python' },
-			{ name: 'MongoDB', icon: 'fab fa-mdb' },
-			{ name: 'MySQL', icon: 'fas fa-database' },
-			{ name: 'PostgreSQL', icon: 'fas fa-database' },
-			{ name: 'Ubuntu', icon: 'fab fa-ubuntu' },
-			{ name: 'Git', icon: 'fab fa-git-square' },
-			{ name: 'Jira', icon: 'fab fa-jira' },
-			{ name: 'Confluence', icon: 'fab fa-confluence' },
+			[
+				{ name: 'JavaScript', icon: 'fab fa-js-square' },
+				{ name: 'Node.js', icon: 'fab fa-node' },
+				{ name: 'Three.js', icon: 'fas fa-cubes' },
+				{ name: 'React.js', icon: 'fab fa-react' },
+				{ name: 'Python', icon: 'fab fa-python' },
+				{ name: 'HTML5', icon: 'fab fa-html5' },
+				{ name: 'CSS3', icon: 'fab fa-css3-alt' },
+				{ name: 'Vue.js', icon: 'fab fa-vuejs' },
+			],
+			[
+				{ name: 'WebGL', icon: 'fas fa-palette' },
+				{ name: 'GLSL', icon: 'fa fa-code' },
+			],
+			[
+				{ name: 'Docker', icon: 'fab fa-docker' },
+				{ name: 'Redis', icon: 'fas fa-cube' },
+				{ name: 'GCloud', icon: 'fab fa-google' },
+				{ name: 'Kubernetes', icon: 'fas fa-dharmachakra' },
+			],
+			[
+				{ name: 'MongoDB', icon: 'fab fa-mdb' },
+				{ name: 'MySQL', icon: 'fas fa-database' },
+				{ name: 'PostgreSQL', icon: 'fas fa-database' },
+			],
+			[
+				{ name: 'Ubuntu', icon: 'fab fa-ubuntu' },
+				{ name: 'Git', icon: 'fab fa-git-square' },
+				{ name: 'Atlassian', icon: 'fab fa-atlassian' },
+			]
 		],
 	},
 	{
@@ -83,14 +97,20 @@ const works = [
 			);
 		},
 		technologies: [
-			{ name: 'C++, STL, Boost', icon: 'fa fa-code' },
-			{ name: 'Linux', icon: 'fab fa-linux' },
-			{ name: 'Docker', icon: 'fab fa-docker' },
-			{ name: 'Python', icon: 'fab fa-python' },
-			{ name: 'OpenMP', icon: 'fas fa-wrench' },
-			{ name: 'OpenCV', icon: 'fab fa-osi' },
-			{ name: 'Bitbucket', icon: 'fab fa-bitbucket' },
-			{ name: 'Assimp', icon: 'fas fa-hammer' },
+			[
+				{ name: 'C++, STL, Boost', icon: 'fa fa-code' },
+				{ name: 'Python', icon: 'fab fa-python' },
+			],
+			[
+				{ name: 'OpenMP', icon: 'fas fa-wrench' },
+				{ name: 'OpenCV', icon: 'fab fa-osi' },
+				{ name: 'Assimp', icon: 'fas fa-hammer' },
+			],
+			[
+				{ name: 'Linux', icon: 'fab fa-linux' },
+				{ name: 'Docker', icon: 'fab fa-docker' },
+				{ name: 'Bitbucket', icon: 'fab fa-bitbucket' },
+			],
 		]
 	},
 ];
@@ -176,15 +196,21 @@ export default function Resume() {
 									</p>
 									{work.description()}
 									<div>
-										<strong>Technologies:</strong>
-										<div>
-											{work.technologies.map(it => {
+										<strong>Technologies:<br/></strong>
+										<div className='tech-container'>
+											{work.technologies.map((group, index) => {
 												return (
-													<span key={`tech-${it.name}`} className='tech-item'>
-														<i title={it.name} className={`fa-2x fa-fw ${it.icon}`}/>
-														{it.name}
-													</span>
-												);
+													<div key={`group-${index}`} className='tech-group'>
+														{group.map(it => {
+															return (
+																<span key={`tech-${it.name}`} className='tech-item'>
+																	<i title={it.name} className={`fa-2x fa-fw ${it.icon}`}/>
+																	{it.name}
+																</span>
+															);
+														})}
+													</div>
+												)
 											})}
 										</div>
 									</div>
