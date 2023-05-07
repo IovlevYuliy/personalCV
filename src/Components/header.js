@@ -108,7 +108,8 @@ export default function Header() {
 
          <div className="row banner">
             <div className="banner-text">
-               <h1 className="responsive-headline">I'm Yuliy Iovlev</h1>
+               <h1 lang='en' className="responsive-headline">I'm Yuliy Iovlev</h1>
+               <h1 lang='ru' className="responsive-headline" hidden>Юлий Иовлев</h1>
                <h3>Full-stack developer who uses spaces for indentation.</h3>
                <hr />
                <ul className="social">
