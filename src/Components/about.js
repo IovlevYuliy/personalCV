@@ -21,7 +21,7 @@ export default function About() {
                      <p>
                         <span>Yuliy Iovlev</span>
                         <span style={{opacity:0}}>Юлий Иовлев</span><br/>
-                        <span>Tbilisi, Georgia</span><br/>
+                        <span>Valencia, Spain </span><br/>
                         <span><a href="mailto:iovlev2@gmail.com">iovlev2@gmail.com</a></span>
                      </p>
                   </div>
