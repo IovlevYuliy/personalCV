@@ -21,7 +21,9 @@ const works = [
 		description: () => {
 			return (
 				<ul style={squareListType}>
-					<li>Developing CAD/CAM system for designing and manufacturing all dental restorations.</li>
+					<li>Designing and developing  CAD/CAM software tailored for dental restoration, including user interfaces, algorithms for design automation, and integration with digital dentistry tools.</li>
+					<li>Implementing features that allow users to accurately model dental restorations, such as crowns, bridges, and nightguards based on 3D scans of patients' teeth.</li>
+					<li>Utilizing advanced rendering techniques to create highly realistic images of dental restorations, helping dental professionals visualize the final product before manufacturing.</li>
 				</ul>
 			);
 		},
